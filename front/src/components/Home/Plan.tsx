@@ -4,9 +4,13 @@ import { FaExchangeAlt } from "react-icons/fa";
 
 type Props = {
     text: string;
+    completed: boolean;
 }
 
-export const Plan: FC = () => {
+export const Plan: FC<Props> = ({
+    text,
+    completed
+}) => {
   return (
     <div 
         className='
@@ -30,7 +34,7 @@ export const Plan: FC = () => {
     >
         <div className='w-4/6 h-full overflex-x-scroll flex items-center'>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur molestiae eos, omnis atque optio doloremque ab eveniet quod odio cum quis sint eius ex sit, repellendus recusandae ipsam. Sint.
+                { text }
             </p>
         </div>
         <div className='w-2/6 h-full flex items-center gap-4 items-center justify-end pr-6'>
